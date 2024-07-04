@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 80px;
+    font-weight: 800;
+    position: relative;
+   
+}
+h1::after{
+    content: "";
+    position: absolute;
+    width:100%;
+    height: 10px;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    
+}
+h1:hover::after{
+    animation-name: lineanimi;
+    animation-duration: 2s;
+}
+
+@keyframes lineanimi {
+    
+    0%{
+         width: 0;
+         left: 0;
+    }
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+
+/* .box{
+    height: 300px;
+    width: 300px;
+    background-color: lightseagreen;
+    position: absolute;
+    animation-name: animi;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; 
+    animation-timing-function:cubic-bezier(0,.95,.31,.31);
+
+}
+
+@keyframes animi {
+    0%{
+     left: 0;
+     background-color: lightseagreen;
+     top: 0;
+     rotate: 0;
+    }
+    50%{
+        left: 80%;
+        background-color: greenyellow;
+        top: 0;
+        rotate: 360deg;
+    }
+    100%{
+     left:80%;
+     background-color: salmon;
+     top: 50%;
+     rotate: 360deg;    
+    }
+    } */
